@@ -64,7 +64,7 @@ var setCurrentAlbum = function(album) {
      }
  };
 
-var songListContainer = document.getElementByClassName('album-view-song-list')
+var songListContainer = document.getElementsByClassName('album-view-song-list')
 var songRows = document.getElementsByClassName('album-view-song-item');
 //album playbutton
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
