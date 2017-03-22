@@ -71,9 +71,13 @@ var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></
 
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     
+     console.log(songListContainer);
 
-     songListContainer.addEventListener('mouseover', function(event){
-        //1
+     
+     songListContainer[0].addEventListener ('mouseover', function(event){
+         
+         //1
         if (event.target.parentElement.className === 'album-view-song-item'){
             event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
         }
@@ -81,7 +85,8 @@ var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></
      
      for (var i = 0; i < songRows.length; i++) {
          songRows[i].addEventListener('mouseleave', function(event) {
-             this.children[0].innerHTML = this.child[0].getAttribute('data-song-number');
+             this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
          });
      }
-};     
+ }; 
+
