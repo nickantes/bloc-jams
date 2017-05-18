@@ -10,7 +10,7 @@ var animatePoints = function() {
 
 
 
-$(window).onload(function() {
+$(window).load(function() {
     
     if ($(window).height() > 950) {
         animatePoints();
