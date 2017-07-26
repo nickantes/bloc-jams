@@ -14,7 +14,7 @@
 }
 .player-bar a,
 .player-bar a:hover {
-    color white;
+    color: white;
     cursor: pointer;
     text-decoration: none;
 }
@@ -37,7 +37,7 @@
     padding-right: 1rem;
 }
 
-.player-bar .main-controls {
+.player-bar .main-controls .previous {
     margin-right: 16.5%;
 }
 
@@ -119,8 +119,8 @@
     border-radius: 50%;
     cursor: pointer;
     -webkit-transition: all 100ms ease-in-out;
-        -moz-transition: all 100ms ease-in-out;
-            transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
 }
 
 .seek-bar:hover .thumb {
@@ -136,7 +136,7 @@
 }
 
 .player-bar .volume .icon {
-    ont-size: 1.1rem;
+    font-size: 1.1rem;
     display: inline-block;
     vertical-align: middle;
 }
@@ -149,8 +149,8 @@
 
 @media (max-width: 640px) {
     .player-bar {
-        padding: 1rem;
-        background-color: rgba (0,0,0,0.6)
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.6)
     }
     
     .player-bar .main-controls,

@@ -121,27 +121,27 @@ var setCurrentAlbum = function(album) {
  
     console.log (document.getElementsByClassName('album-view-title'));
      
-     $albumTitle.text(album.title);
-     $albumArtist.text(album.artist);
-     $albumReleaseInfo.text(album.year + ' ' + album.label);
-     $albumImage.attr('src', album.albumArtUrl);
+    $albumTitle.text(album.title);
+    $albumArtist.text(album.artist);
+    $albumReleaseInfo.text(album.year + ' ' + album.label);
+    $albumImage.attr('src', album.albumArtUrl);
  
      
-     $albumSongList.empty();
+    $albumSongList.empty();
     
      
-     for (var i = 0; i < album.songs.length; i++) {
-         var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
-         $albumSongList.append($newRow);
+    for (var i = 0; i < album.songs.length; i++) {
+        var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
+        $albumSongList.append($newRow);
      }
  };
 
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
 
- var trackIndex = function(album, song) {
-     return album.songs.indexOf(song);
- };
+var trackIndex = function(album, song) {
+    return album.songs.indexOf(song);
+};
 
 var updatePlayerBarSong = function() {
 
@@ -164,9 +164,9 @@ var currentlyPlayingSongNumber = null;
 var currentSongFromAlbum = null;
 
  $(document).ready(function() {
-     setCurrentAlbum(albumPicasso);
-     $previousButton.click(previousSong);
-     $nextButton.click(nextSong);
-     });
+    setCurrentAlbum(albumPicasso);
+    $previousButton.click(previousSong);
+    $nextButton.click(nextSong);
+    });
 
      
