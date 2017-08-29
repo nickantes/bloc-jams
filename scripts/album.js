@@ -7,8 +7,8 @@ var getSongNumberCell = function(number) {
     return $('.song-item-number[data-song-number="' + number + '"]');
 };
 
- var createSongRow = function(songNumber, songName, songLength) {
-     var template =
+var createSongRow = function(songNumber, songName, songLength) {
+    var template =
         '<tr class="album-view-song-item">'
       + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
       + '  <td class="song-item-title">' + songName + '</td>'
@@ -171,6 +171,16 @@ var currentSongFromAlbum = null;
     setCurrentAlbum(albumPicasso);
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
-    });
+    
+       
+    //var $('.main-controls .play-pause').click(togglePlayFromPlayerBar()) 
+        
+    //var togglePlayFromPlayerBar() = function(){
+     //   if (){ 
+           
+     //   } else { 
+            
+     //   }
+ });
 
      
