@@ -172,6 +172,7 @@ var playerBarPauseButton = '<span class="ion-pause"></span>';
 var currentAlbum = null;
 var currentlyPlayingSongNumber = null;
 var currentSongFromAlbum = null;
+var currentSoundFile = null;
 
  $(document).ready(function() {
     setCurrentAlbum(albumPicasso);
