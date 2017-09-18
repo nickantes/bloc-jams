@@ -15,9 +15,9 @@ var createSongRow = function(songNumber, songName, songLength) {
       + '  <td class="song-item-duration">' + songLength + '</td>'
       + '</tr>'
       ;
- 
+
     var $row = $(template);
-     
+
 var clickHandler = function() {
 	var songNumber = parseInt($(this).attr('data-song-number'));
 
@@ -37,7 +37,7 @@ var clickHandler = function() {
         currentSongFromAlbum = null;
 	}
 };
-    
+
     var onHover = function(event) {
         var songNumberCell = $(this).find('.song-item-number');
         var songNumber = parseInt($(songNumberCell).attr('data-song-number'));
@@ -56,12 +56,12 @@ var clickHandler = function() {
         }
         console.log("songNumber type is " + typeof songNumber + "\n and currentlyPlayingSongNumber type is " + typeof currentlyPlayingSongNumber);
     };
- 
-     
+
+
     $row.find('.song-item-number').click(clickHandler);
-     
+
     $row.hover(onHover, offHover);
-     
+
     return $row;
  };
 
@@ -101,7 +101,7 @@ var previousSong = function() {
     currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
 
 
-    
+
 
     var $previousSongNumberCell = getSongNumberCell(currentlyPlayingSongNumber);
     var $lastSongNumberCell = getSongNumberCell(lastSongNumber);
@@ -117,18 +117,18 @@ var setCurrentAlbum = function(album) {
      var $albumReleaseInfo = $('.album-view-release-info');
      var $albumImage = $('.album-cover-art');
      var $albumSongList = $('.album-view-song-list');
- 
+
     console.log (document.getElementsByClassName('album-view-title'));
-     
+
     $albumTitle.text(album.title);
     $albumArtist.text(album.artist);
     $albumReleaseInfo.text(album.year + ' ' + album.label);
     $albumImage.attr('src', album.albumArtUrl);
- 
-     
+
+
     $albumSongList.empty();
-    
-     
+
+
     for (var i = 0; i < album.songs.length; i++) {
         var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
         $albumSongList.append($newRow);
@@ -171,16 +171,14 @@ var currentSongFromAlbum = null;
     setCurrentAlbum(albumPicasso);
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
-    
-       
-    //var $('.main-controls .play-pause').click(togglePlayFromPlayerBar()) 
-        
+
+
+    //var $('.main-controls .play-pause').click(togglePlayFromPlayerBar())
+
     //var togglePlayFromPlayerBar() = function(){
-     //   if (){ 
-           
-     //   } else { 
-            
+     //   if (){
+
+     //   } else {
+
      //   }
  });
-
-     
