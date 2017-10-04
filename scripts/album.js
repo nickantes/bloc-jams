@@ -212,7 +212,8 @@ var togglePlayFromPlayerBar = function() {
         // Your code goes here
 
         currentSoundFile.play();
-
+        $songButtonContainer = $(".album-view-song-item").find("[data-song-number='" + currentlyPlayingSongNumber + "']");
+        $songButtonContainer.html(pauseButtonTemplate);
     } else {
 
         console.log(currentlyPlayingSongNumber);
