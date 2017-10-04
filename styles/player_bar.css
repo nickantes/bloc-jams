@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     height: 200px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     z-index: 100;
 }
 
@@ -12,6 +12,7 @@
     font-size: 1.1rem;
     vertical-align: middle;
 }
+
 .player-bar a,
 .player-bar a:hover {
     color: white;
@@ -120,7 +121,10 @@
     cursor: pointer;
     -webkit-transition: all 100ms ease-in-out;
     -moz-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out;
+    transition: width 100ms ease-in-out,
+    height 100ms ease-in-out,
+    margin-top 100ms ease-in-out,
+    margin-left 100ms ease-in-out;
 }
 
 .seek-bar:hover .thumb {
@@ -149,10 +153,10 @@
 
 @media (max-width: 640px) {
     .player-bar {
-    padding: 1rem;
-    background-color: rgba(0,0,0,0.6)
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.6)
     }
-    
+
     .player-bar .main-controls,
     .player-bar .currently-playing,
     .player-bar .volume {
@@ -162,16 +166,16 @@
         width: 100%;
         text-align: center;
     }
-    
+
     .player-bar .main-controls,
     .player-bar .volume {
         min-height: 3.5rem;
     }
-    
+
     .player-bar .currently-playing {
         min-height: 2.5rem;
     }
-     
+
     .player-bar .artist-name,
     .player-bar .song-name {
         display: none;
