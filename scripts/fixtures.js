@@ -30,6 +30,7 @@ var albumPicasso = {
             duration: 374.22,
             audioUrl: 'assets/music/magenta'
         }
+
     ]
 };
 
