@@ -286,7 +286,9 @@ var currentSoundFile = null;
 var currentVolume = 80;
 
 
-
+var setCurrentTimeInPlayerBar = function(currentTime) {
+  $('.current-time').text('.currentTime')
+}
 
 
 
